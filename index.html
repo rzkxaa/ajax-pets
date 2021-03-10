@@ -32,15 +32,100 @@
               let pet = "";//will store our pet
             
 
-              if(feels == "fluffy" && likes == "petted" && eats == "carrots"){
-                    pet = "rabbit";
-              }
 
-              if(feels == "scaly" && likes == "ridden" && eats == "pets"){
+              if(feels == "scaly" && likes == "ridden" && eats == "meats"){
                     pet = "velociraptor";
               }
 
-             
+              if(feels == "scaly" && likes == "ridden" && eats == "veggies"){
+                    pet = "hedgehog";
+              }
+              if(feels == "scaly" && likes == "ridden" && eats == "anything"){
+                    pet = "velociraptor";
+              }
+
+              if(feels == "scaly" && likes == "sleeping" && eats == "meats"){
+                    pet = "velociraptor";
+              }
+
+              if(feels == "scaly" && likes == "sleeping" && eats == "veggies"){
+                    pet = "hedgehog";
+              }
+              if(feels == "scaly" && likes == "sleeping" && eats == "anything"){
+                    pet = "velociraptor";
+              }
+
+              if(feels == "scaly" && likes == "petted" && eats == "meats"){
+                    pet = "pig";
+              }
+
+              if(feels == "scaly" && likes == "petted" && eats == "veggies"){
+                    pet = "greyhound";
+              }
+              if(feels == "scaly" && likes == "petted" && eats == "anything"){
+                    pet = "pig";
+              }
+              if(feels == "fluffy" && likes == "petted" && eats == "veggies"){
+                    pet = "rabbit";
+              }
+              if(feels == "fluffy" && likes == "petted" && eats == "anything"){
+                    pet = "bermese";
+              }
+
+              if(feels == "fluffy" && likes == "petted" && eats == "meats"){
+                    pet = "bad-dog";
+              }
+
+              if(feels == "fluffy" && likes == "ridden" && eats == "meats"){
+                    pet = "cat";
+              }
+              if(feels == "fluffy" && likes == "ridden" && eats == "veggies"){
+                    pet = "bird";
+              }
+              if(feels == "fluffy" && likes == "ridden" && eats == "anything"){
+                    pet = "golden";
+              }
+              if(feels == "fluffy" && likes == "sleeping" && eats == "meats"){
+                    pet = "bulldog";
+              }
+              if(feels == "fluffy" && likes == "sleeping" && eats == "veggies"){
+                    pet = "tortie-kitten";
+              }
+              if(feels == "fluffy" && likes == "sleeping" && eats == "anything"){
+                    pet = "lab";
+              }
+
+
+              if(feels == "other" && likes == "petted" && eats == "veggies"){
+                    pet = "rabbit";
+              }
+              if(feels == "other" && likes == "petted" && eats == "anything"){
+                    pet = "pom";
+              }
+
+              if(feels == "other" && likes == "petted" && eats == "meats"){
+                    pet = "bad-dog";
+              }
+
+              if(feels == "other" && likes == "ridden" && eats == "meats"){
+                    pet = "cat";
+              }
+              if(feels == "other" && likes == "ridden" && eats == "veggies"){
+                    pet = "bird";
+              }
+              if(feels == "other" && likes == "ridden" && eats == "anything"){
+                    pet = "golden";
+              }
+              if(feels == "other" && likes == "sleeping" && eats == "meats"){
+                    pet = "bulldog";
+              }
+              if(feels == "other" && likes == "sleeping" && eats == "veggies"){
+                    pet = "tortie-kitten";
+              }
+              if(feels == "other" && likes == "sleeping" && eats == "anything"){
+                    pet = "lab";
+              }
+              
               //create text to tell use about pet!
               let output = "";
               output += `<p>Your pet is a: ${pet}</p>`;
@@ -53,7 +138,7 @@
             $('#pet').load(`includes/content.html #${pet}`);
             //$('#pet').load('include/content.html #cute-kitten');
 
-               e.preventDefault();//no need to submit as you'll be doing AJAX on this page
+            e.preventDefault();//no need to submit as you'll be doing AJAX on this page
        
            });
        });
@@ -68,18 +153,21 @@
        <p>Please choose how you would like your pet to feel:</p>
        <input type="radio" name="feels" value="fluffy" required="required"> fluffy <br />
        <input type="radio" name="feels" value="scaly"> scaly <br />
+       <input type="radio" name="feels" value="other"> neither <br/>
    </div>
    <div id="pet_likes">
        <h3>Likes</h3>
        <p>Please tell us what your pet will like:</p>
        <input type="radio" name="likes" value="petted" required="required"> to be petted <br />
        <input type="radio" name="likes" value="ridden"> to be ridden <br />
+       <input type="radio" name="likes" value="sleeping"> to be sleeping <br />
    </div>
        <div id="pet_eats">
        <h3>Eats</h3>
-       <p>Please tell us what your pet likes to eat:</p>
-       <input type="radio" name="eats" value="carrots" required="required"> carrots <br />
-       <input type="radio" name="eats" value="pets"> other people's pets <br />
+       <p>Please tell us what you like your pet to eat:</p>
+       <input type="radio" name="eats" value="veggies" required="required"> Your pet is a herbivore <br />
+       <input type="radio" name="eats" value="meats"> Your pet is a carnivore <br />
+       <input type="radio" name="eats" value="anything"> Your pet is an omnivore <br />
    </div>
   
    <input type="submit" value="submit it!" />
